@@ -68,4 +68,14 @@ describe('Unit test', () => {
       }, done);
     });
   });
+
+  context('Install package', () => {
+    it.only('should return install package info',  function (done) {
+      this.timeout(600000);
+      lib.InstallPackages.install('jscs@2.9.0').then((res) => {
+        res.length.should.be.above(0);
+        done();
+      }, done);
+    });
+  });
 });

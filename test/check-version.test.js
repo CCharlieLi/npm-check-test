@@ -7,9 +7,9 @@ const chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
 
 describe('Check packages version', () => {
-  it.only('should return oudated info', (done) => {
+  it('should return oudated info', (done) => {
     lib.CheckVersion.getOutdatedPackages().then((res) => {
-
+      res.length.should.be.above(0);
       done();
     }, done);
   });
