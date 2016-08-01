@@ -1,0 +1,48 @@
+{
+  "name": "npm-check-test",
+  "version": "0.0.1",
+  "description": "Node module for checking and testing installed dependencies and package.json to keep everything been used and updated.",
+  "main": "./bin/nctest",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CCharlieLi/npm-check-test.git"
+  },
+  "keywords": [
+    "npm",
+    "promise",
+    "dependency",
+    "check",
+    "update",
+    "test",
+    "module",
+    "node",
+    "management"
+  ],
+  "bin": {
+    "npm-check-test": "./bin/npm-check-test",
+    "nctest": "./bin/npm-check-test"
+  },
+  "author": "CCharlieLi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CCharlieLi/npm-check-test/issues"
+  },
+  "homepage": "https://github.com/CCharlieLi/npm-check-test#readme",
+  "dependencies": {
+    "bluebird": "3.4.1",
+    "npm": "^3.10.5",
+    "npm-as-promised": "0.0.7",
+    "npm-check": "^5.2.3"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^5.3.0",
+    "coveralls": "^2.11.12",
+    "istanbul": "^0.4.4",
+    "jscs": "^2.9.0",
+    "mocha": "^2.5.3"
+  }
+}
