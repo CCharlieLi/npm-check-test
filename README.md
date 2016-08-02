@@ -1,5 +1,8 @@
 # npm-check-test
 
+[![Build Status](https://travis-ci.org/CCharlieLi/npm-check-test.svg?branch=master)](https://travis-ci.org/CCharlieLi/npm-check-test)
+[![Coverage Status](https://coveralls.io/repos/github/CCharlieLi/npm-check-test/badge.svg?branch=master)](https://coveralls.io/github/CCharlieLi/npm-check-test?branch=master)
+
 Node module for checking and testing installed dependencies and package.json to keep everything been used and updated.
 
 # Description
