@@ -1,5 +1,5 @@
-ENV = NODE_ENV=nctest
-MOCHA_OPTS = -b --timeout 10000 --reporter spec
+ENV = DEBUG=nctest:*
+MOCHA_OPTS = -b --timeout 30000 --reporter spec
 TESTS = test/*.test.js
 NODE_BIN = ./node_modules/.bin
 MOCHA = $(NODE_BIN)/_mocha
@@ -25,10 +25,4 @@ test-cov:
 	@$(ENV) $(ISTANBUL) cover $(MOCHA) -- $(MOCHA_OPTS) $(TESTS)
 test-coveralls: test-cov
 	@cat ./coverage/lcov.info | $(COVERALLS) --verbose
-unit:
-	@echo "Unit testing"
-	@make lint-fix
-	@make lint
-	@NODE_ENV=test $(MOCHA) $(MOCHA_OPTS) $(path)
-.PHONY: lint lint-fix test test-cov unit test-coveralls
-
+.PHONY: lint lint-fix test test-cov test-coveralls

@@ -3,8 +3,6 @@
 const lib = require('../lib');
 const chai = require('chai');
 const should = chai.should();
-const chaiAsPromised = require('chai-as-promised');
-chai.use(chaiAsPromised);
 
 describe('Unit test', () => {
   context('Get package info from NPM', () => {
@@ -70,10 +68,10 @@ describe('Unit test', () => {
   });
 
   context('Install package', () => {
-    it.only('should return install package info',  function (done) {
-      this.timeout(600000);
-      lib.InstallPackages.install('jscs@2.9.0').then((res) => {
-        res.length.should.be.above(0);
+    it('should return install package info',  function (done) {
+      this.timeout(180000);
+      lib.InstallPackages.install(['jscs@3.0.0']).then((res) => {
+        res.should.be.equal(true);
         done();
       }, done);
     });
