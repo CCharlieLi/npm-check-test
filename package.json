@@ -25,6 +25,10 @@
     "npm-check-test": "./bin/npm-check-test",
     "nctest": "./bin/npm-check-test"
   },
+  "engines": {
+    "npm": "~3.10.1",
+    "node": "~6.3.1"
+  },
   "author": "CCharlieLi",
   "license": "MIT",
   "bugs": {
