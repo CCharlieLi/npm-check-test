@@ -27,4 +27,10 @@ npm i npm-check-test -g
 npm i npm-check-test --save
 ```
 
+# TO DO
+- Install config with exact version
+- Config system
+- Command setting
+
+
 # Usage
